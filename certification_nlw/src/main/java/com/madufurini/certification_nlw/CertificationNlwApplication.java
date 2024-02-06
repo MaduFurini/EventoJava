@@ -1,4 +1,4 @@
-package br.com.maduFurini.certification_nlw;
+package com.madufurini.certification_nlw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

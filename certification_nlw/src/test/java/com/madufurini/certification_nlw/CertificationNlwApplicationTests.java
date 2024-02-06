@@ -1,4 +1,4 @@
-package br.com.maduFurini.certification_nlw;
+package com.madufurini.certification_nlw;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
