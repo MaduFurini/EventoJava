@@ -1,18 +1,24 @@
 package com.madufurini.certification_nlw.modules.students.usecases;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.madufurini.certification_nlw.modules.students.dto.VerifyIfHasCertificationDTO;
+import com.madufurini.certification_nlw.modules.students.repositories.CertificationStudentRepository;
 
 @Service
-public class VerifyIfHasCertificationUseCase { //Regra de negócio
+public class VerifyIfHasCertificationUseCase { // Regra de negócio
+
+    @Autowired
+    private CertificationStudentRepository certificationStudentRepository;
 
     public boolean execute(VerifyIfHasCertificationDTO dto){
-    if ("teste@teste.com".equals(dto.getEmail()) && "JAVA".equals(dto.getTechnology())) {
+        var result = this.certificationStudentRepository.findByStudentEmailAndTechnology(dto.getEmail(), dto.getTechnology());
+
+        if (!result.isEmpty()) {
             return true;
         }
 
         return false;
     }
-
 }
