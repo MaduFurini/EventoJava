@@ -1,4 +1,4 @@
-package com.madufurini.certification_nlw.modules.students.entities;
+package com.madufurini.certification_nlw.modules.questions.entities;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -21,30 +21,15 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "certifications")
-public class CertificationStudentEntity {
-
-   @Id
+@Entity(name = "alternatives")
+public class AlternativesEntity{
+    @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
- 
-    @Column(length = 100)
-    private String technology;
 
-    @Column(length = 10)
-    private int grade;
+    private String description;
 
-    @JoinColumn(name = "student_id")
-    private UUID studentID;
-
-    @ManyToOne
-    @JoinColumn(name = "student_id", insertable = false, updatable = false)
-    private StudentEntity studentEntity;
-
-    @OneToMany
-    @JoinColumn(name = "answer_certification_id")
-    List<AnswersCertificationsEntity> answersCertificationsEntities;
-
+    private boolean isCorrect;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
