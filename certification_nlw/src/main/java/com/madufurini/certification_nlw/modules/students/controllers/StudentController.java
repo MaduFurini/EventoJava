@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 
 import com.madufurini.certification_nlw.modules.students.dto.VerifyIfHasCertificationDTO;
-import com.madufurini.certification_nlw.modules.students.usecases.VerifyIfHasCertificationUseCase;
+import com.madufurini.certification_nlw.modules.students.useCases.VerifyIfHasCertificationUseCase;
 
 
 @RestController

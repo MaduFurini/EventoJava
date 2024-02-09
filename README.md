@@ -83,3 +83,11 @@ Aprendizado de Java utilizando Postgres, Docker e springboot
         - @RestController //Entende que é pra retornar em via JSON - API REST
         - @RequestMapping("/primeiraController") //Definir path
 
+# Anotações Aula 2
+    Spring Data JPA
+        - Dependência que integra a aplicação com o banco de dados
+        - Hibernate -> ORM 
+            - Mapear os atributos e converter para que o banco de dados entenda e vice-versa
+    
+    Camada Repositório (Repository)
+        - Interagir como banco de dados
