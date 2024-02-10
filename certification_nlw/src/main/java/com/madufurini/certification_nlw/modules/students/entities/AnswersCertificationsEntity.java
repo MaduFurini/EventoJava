@@ -5,6 +5,8 @@ import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,15 +14,16 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.Data; 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;  
 
 @Data
 @AllArgsConstructor // Construtor com todos os atributos
 @NoArgsConstructor //Construtor vazio
 @Entity(name = "answers_ceritification_students")
+@Builder
 public class AnswersCertificationsEntity{
     
     @Id
@@ -32,6 +35,7 @@ public class AnswersCertificationsEntity{
 
     @ManyToOne
     @JoinColumn(name = "certitication_id", insertable = false, updatable = false)
+    @JsonBackReference
     private CertificationStudentEntity certificationStudentEntity;
 
     @Column(name = "student_id")
