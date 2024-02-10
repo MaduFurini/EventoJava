@@ -12,14 +12,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Data; 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;  
 import java.util.List;
 
-import com.madufurini.certification_nlw.modules.questions.entities.AlternativesEntity;
 
 @Data
 @AllArgsConstructor // Construtor com todos os atributos
